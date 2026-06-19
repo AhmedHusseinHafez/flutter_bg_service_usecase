@@ -70,7 +70,9 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         });
       });
       AppBackgroundService.on('tick-background').listen((event) {
-        print('Tick Background Count: ${event?['count'] ?? 0}');
+        print(
+          'Tick Background Count: ${event?['count'] ?? 0} ${event?['platform'] ?? ''}',
+        );
       });
     });
   }
